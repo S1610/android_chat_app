@@ -16,7 +16,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
     int _selectedIndex = 2;
 
-  final List<Widget> _pages = [RobotPriceCalculatorPage(), AuthGate(), DatasetCollector()];
+  final List<Widget> _pages = [RobotPriceCalculatorPage(), AuthGate(), DatasetCollector()];//pageတွေထပ်ထည့်ချင်ရင်ဒီမှာထည့်ပါ
 
   void _onDrawerItemSelected(int index) {
     setState(() {
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
     print(_pages.length);
   }
 
-  final List<String> _titles = [
+  final List<String> _titles = [            //Drawer titles
     'Robot Price Calculator',
     'Group Chat',
     'Dataset Collector',

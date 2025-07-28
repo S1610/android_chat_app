@@ -5,39 +5,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:file_picker/file_picker.dart'; // Import for file_picker
-// Removed archive imports as zipping is no longer needed
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Class Widget Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Class Widget Demo'),
-        ),
-        body: Center(
-          child: ClassWidget(
-            className: 'My First Class',
-            onDelete: (name) {
-              print('Delete class: $name');
-              // Implement actual deletion logic here
-            },
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 class ClassWidget extends StatefulWidget {
   String className;

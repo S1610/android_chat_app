@@ -23,13 +23,11 @@ class AuthService {
       );
 
       //save user info
-      _firestore.collection("Users").doc(userCredential.user!.uid).set(
-        {
-          'uid' : userCredential.user!.uid, 
-          'email':email,
-        }
-      );
-      
+      _firestore.collection("Users").doc(userCredential.user!.uid).set({
+        'uid': userCredential.user!.uid,
+        'email': email,
+      });
+
       return userCredential;
     } on FirebaseException catch (e) {
       throw Exception(e.code);
@@ -43,18 +41,14 @@ class AuthService {
   ) async {
     try {
       //create user
-      UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
-            email: email, 
-            password: password
-            );
+      UserCredential userCredential = await _auth
+          .createUserWithEmailAndPassword(email: email, password: password);
 
       //save user info
-      _firestore.collection("Users").doc(userCredential.user!.uid).set(
-        {
-          'uid' : userCredential.user!.uid, 
-          'email':email,
-        }
-      );
+      _firestore.collection("Users").doc(userCredential.user!.uid).set({
+        'uid': userCredential.user!.uid,
+        'email': email,
+      });
 
       return userCredential;
     } on FirebaseAuthException catch (e) {

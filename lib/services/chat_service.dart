@@ -38,7 +38,7 @@ class ChatService {
     final String currentUserID = _auth.currentUser!.uid;
     final String currentUserEmail = _auth.currentUser!.email!;
     final Timestamp timestamp = Timestamp.now();
-    
+
     //create a new message
     Message newMessage = Message(
       senderID: currentUserID,
@@ -58,8 +58,6 @@ class ChatService {
         .collection("messages")
         .add(newMessage.toMap());
   }
-  
-  //send images
 
   //get messages
   Stream<List<Message>> getMessagesStream() {
