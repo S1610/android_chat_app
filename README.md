@@ -1,13 +1,5 @@
 # android_chat_app
 
-This is the main README for the Android Chat App.
-
-## Getting Started
-
-=======
-# simple_android# android_chat_app
->>>>>>> 3ce4ab4487c20f6a1addd13a6c6a3d21dcc3aab9
-
 A Flutter-based Android application that combines group chatting, a robot price calculator, and a dataset collector for machine learning experiments.
 
 ## Description
@@ -67,6 +59,27 @@ This application provides a versatile platform with three main modules:
 
 ```sh
 flutter run
+```
+
+## Project Structure
+
+```
+android_chat_app/
+├── android/                # Android-specific configuration
+├── ios/                    # iOS-specific configuration
+├── lib/
+│   ├── component/          # Reusable widgets and components
+│   ├── models/             # Data models
+│   ├── pages/              # Application pages/screens
+│   ├── services/           # Backend services (Firebase, APIs)
+│   ├── states/             # State management (Providers, Notifiers)
+│   ├── widgets/            # Custom widgets
+│   ├── firebase_options.dart # Firebase configuration
+│   └── main.dart           # Entry point of the application
+├── assets/                 # Static assets (images, JSON files)
+├── pubspec.yaml            # Project dependencies and metadata
+├── README.md               # Project documentation
+└── CONTRIBUTING.md         # Contribution guidelines
 ```
 
 ## Contributing
