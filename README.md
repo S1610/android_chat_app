@@ -1,5 +1,13 @@
 # android_chat_app
 
+This is the main README for the Android Chat App.
+
+## Getting Started
+
+=======
+# simple_android# android_chat_app
+>>>>>>> 3ce4ab4487c20f6a1addd13a6c6a3d21dcc3aab9
+
 A Flutter-based Android application that combines group chatting, a robot price calculator, and a dataset collector for machine learning experiments.
 
 ## Description
