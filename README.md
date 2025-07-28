@@ -61,6 +61,56 @@ This application provides a versatile platform with three main modules:
 flutter run
 ```
 
+## Building and Running the Android APK
+
+### Android Build Dependencies
+
+Before building the Android APK, ensure you have the following dependencies installed:
+
+*   **Android SDK:** The Android SDK provides the necessary tools and libraries to build, test, and debug apps for Android.
+*   **Android Build Tools:** These tools are part of the Android SDK and are used for compiling and packaging Android apps.
+*   **Java Development Kit (JDK):** Flutter requires a JDK to compile Java code. Ensure you have JDK 8 or later installed.
+*   **Android Studio:** While not strictly required for building from the command line, Android Studio provides a convenient IDE and helps manage Android SDK dependencies.
+
+You can manage these dependencies using Android Studio's SDK Manager.
+
+### Building the APK
+
+1.  **Build the APK:**
+
+    Run the following command in the project directory to build the APK:
+
+    ```sh
+    flutter build apk
+    ```
+
+    This command generates an APK file in the `build/app/outputs/apk/release/app-release.apk` directory.
+
+    For a signed APK (recommended for release), you'll need to configure signing keys. Refer to the Flutter documentation for details: [https://docs.flutter.dev/deployment/android#signing-the-app](https://docs.flutter.dev/deployment/android#signing-the-app)
+
+### Running the APK
+
+1.  **Connect an Android device or start an emulator.**
+2.  **Install the APK:**
+
+    You can install the APK on a connected device or emulator using the following command:
+
+    ```sh
+    flutter install
+    ```
+
+    Alternatively, you can manually install the APK using ADB (Android Debug Bridge):
+
+    ```sh
+    adb install build/app/outputs/apk/release/app-release.apk
+    ```
+
+    Make sure ADB is installed and configured on your system.
+
+3.  **Run the app:**
+
+    Once the APK is installed, you can launch the app from the device or emulator.
+
 ## Project Structure
 
 ```
